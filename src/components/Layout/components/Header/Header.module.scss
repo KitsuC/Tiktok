@@ -3,6 +3,7 @@
   --search-height: 46px;
   --search-top-space: 9px;
   --search-btn-with: 52px;
+  --search-max-width: 500px;
 
   height: var(--default-layout-header-height, 60px);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -16,12 +17,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 24px 0 16px;
 }
 
 .logo {
-  padding-left: 16px;
+  // padding-left: 16px;
   display: flex;
   align-items: center;
+  min-width: 300px;
 }
 
 .search-btn {
@@ -51,15 +54,19 @@
     border-color: rgba(22, 24, 35, 0.2);
     .svg-search,
     .search-btn {
-      fill: var(--black);
       background-color: #e4e4e6;
     }
   }
-  .svg-search{
-    fill: rgba(22, 24, 35, .34);
+
+  &:hover .svg-search {
+    fill: var(--black);
   }
 
-  .svg-search-active{
+  .svg-search {
+    fill: rgba(22, 24, 35, 0.34);
+  }
+
+  .svg-search-active {
     fill: var(--black);
   }
 
@@ -83,6 +90,13 @@
   }
 }
 
+.search-title {
+  padding: 5px 12px;
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 .loading,
 .clear-btn {
   width: 16px;
@@ -92,4 +106,32 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .app-btn,
+  .more-btn {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-btn {
+    height: 48px;
+    width: 48px;
+  }
+
+  .more-btn {
+    height: 28px;
+    width: 28px;
+  }
+
+  button + button {
+    margin-left: 16px;
+  }
 }

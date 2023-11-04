@@ -1,10 +1,11 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
-
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 :root {
   --primary: rgb(254, 44, 85);
   --black: black;
-  --text-color:#333;
+  --white: white;
+  --text-color: #333;
   //DefaultLayout
   --default-layout-header-height: 60px;
   --default-layout-width: 100%;
@@ -14,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html {
@@ -21,11 +23,13 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  // font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  color: var( --text-color);
+  color: var(--text-color);
+  // height: 1000vh;
 }
 
 button,
@@ -35,15 +39,15 @@ input,
   border: none;
 }
 
-a[href]{
-  color: var( --text-color);
+a[href] {
+  color: var(--text-color);
   text-decoration: none;
 }
 
-.svg-search{
-  color: red
+.svg-search {
+  color: red;
 }
 
-button{
+button {
   cursor: pointer;
 }
